@@ -11,7 +11,8 @@ operator<< first of all operators.
 ***/
 class Integer{
 public:
-    Integer(int i=0){ _i=i;}
+    //A constructor that can take one argument of any type is called a type converting constructor
+    Integer(int i=0):_i(i){}
     //insertion and extraction operators
     friend std::ostream& operator<<(std::ostream& os, const Integer& obj);
     friend std::istream& operator>>(std::istream& is, Integer& obj);
