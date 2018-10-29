@@ -40,6 +40,7 @@ std::istream& operator>>(std::istream& is, Person& obj){
     string fullname;
     getline(is, fullname);
     //extract firstname and lastname (format firstname lastnames)
+    //More about strings and stringstreams: https://stackoverflow.com/questions/312245/what-are-the-string-stream-and-stringstream-classes-in-c
     std::istringstream txt(fullname);
     std::vector<std::string> results(std::istream_iterator<std::string>{txt},
                                  std::istream_iterator<std::string>());
