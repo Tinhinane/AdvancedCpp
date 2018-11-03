@@ -3,7 +3,7 @@ using namespace std;
 
 //const functions
 //A function becomes const when const keyword is used in function’s declaration.
-//A const function is not allow them to modify the object on which they are called.
+//A const function is not allow to modify the object on which they are called.
 
 class Student{
     // Access specifier

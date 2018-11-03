@@ -16,6 +16,10 @@ class Person{
 public:
     Person(string fn="", string ln="", string st="", string pc="", string ct="")
         :_firstname(fn), _lastname(ln), _street(st), _postcode(pc), _city(ct){}
+    // Alternative: default constructor with no param, and another parameterized constructor
+    // Person(){}
+    // Person(string fn, string ln, string st, string pc, string ct)
+    //         :_firstname(fn), _lastname(ln), _street(st), _postcode(pc), _city(ct){}
     //insertion and extraction operators
     friend std::ostream& operator<<(std::ostream& os, const Person& obj);
     friend std::istream& operator>>(std::istream& is, Person& obj);
