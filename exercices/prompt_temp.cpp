@@ -23,7 +23,9 @@ void prompt_helper(std::istream& is, std::string& result, int)
     getline(is, result);
 }
 
-//#2 containers
+//#2 A: Containers will fail for all types that don't have a type named size_type
+// B: Compiler will select this function and won't consider #3 because the third
+// argument 0 matches int type, won't need to go to step 3 (argument conversion)
 template<typename T, typename = typename T::size_type>
 void prompt_helper(std::istream& is, T& result, int)
 {
